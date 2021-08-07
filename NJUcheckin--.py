@@ -5,6 +5,7 @@ import sys
 import urllib
 import requests
 import execjs
+import os
 from http.cookiejar import CookieJar
 from bs4 import BeautifulSoup
 
