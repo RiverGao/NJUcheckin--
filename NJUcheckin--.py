@@ -95,7 +95,7 @@ class Njuer:
             test = json.loads(res.text)
             if test['code'] == '0':
                 print('登录成功')
-                notify('登录成功')
+                # notify('登录成功')
         except Exception as e:
             msg = '登录失败,请检查密码'+str(e)
             print(msg)
@@ -127,10 +127,8 @@ class Njuer:
         res = json.loads(res.text)  
         if res['code'] == '0':
             if res['msg'] == '成功':
-                f = open("email.txt", "w")
-                f.write("打卡成功！")
-                print("打卡成功！")
-                f.close()
+                notify('打卡成功')
+                print("打卡成功")
                 return 1
         notify('打卡失败')
         print("打卡失败")
